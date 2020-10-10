@@ -1,0 +1,134 @@
+@import url(//fonts.googleapis.com/css?family=Chilanka);
+
+*{
+margin: 0;
+padding: 0;
+box-sizing:border-box;
+
+}
+
+.container {
+
+    min-height:100vh;
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    }
+
+#hero{
+    background-image: url(img/img8.jpg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+
+
+
+
+#hero h1 , #hero  p{
+    display: block;
+    width: fit-content;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, sans-serif;
+    font-size: 50px;
+    font-weight: bolder;
+    position: relative;
+    color: rgb(173, 133, 173);
+
+}
+
+
+#navbar {
+display: flex;
+justify-content: space-between;
+background: rgb(177, 115, 115);
+color: #fff;
+padding: 40px 80px;
+position: sticky;
+top:0;
+z-index: 1;
+
+}
+#navbar ul{
+
+    display: flex;
+    align-items: center;
+    list-style: none;
+    
+}
+#navbar h2 a{
+    color:#fff;
+    text-decoration: none;
+
+}
+#navbar li a{
+    font-size: large;
+    text-decoration: none;
+    color:#fff;
+padding:10px;
+margin: 0 5px;
+border-radius: 10px;
+}
+
+#navbar li a:hover {
+
+    background-color: purple;
+}
+
+footer {
+background-color: rgb(184, 192, 199);
+text-align: center;
+font-weight:large;
+font-size: large;
+height:110px;
+padding: 30px;
+}
+
+.responsive-menu-btn {
+    display:none;
+}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) {
+     
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+    #navbar ul {
+        display: none;
+    }
+
+    .responsive-menu-btn {
+        display:block;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+    
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+
+}
+
+  /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+    nav {
+        max-width:33%;
+    }
+}
+
+
+
+
+
+
+
+  
