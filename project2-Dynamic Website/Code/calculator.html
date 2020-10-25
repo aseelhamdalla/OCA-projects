@@ -1,0 +1,163 @@
+<html>
+  <head>
+    <title>To-do list</title>
+    <link
+      rel="stylesheet"
+      href="css/bootstrap.css"
+    />
+    <link rel="stylesheet" href="css/calculator.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Chilanka"
+      rel="stylesheet"
+    />
+    <!-- icone for menu-->
+    <script
+      src="https://kit.fontawesome.com/7ae71a9832.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Iused 5type for meta-->
+    <meta charset="utf-8" />
+
+    <meta name="author" content="BY ARA" />
+    <!--the viewport to make your website look good on all devices-->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="ARA Bussiness Owner BY Assel Roaa and Adem.This web application was created to help businessmen, 
+the banking sector and companies to organize their businesses, accounts housewives, university and school students."
+    />
+    <meta
+      name="keyword"
+      content="Organize tasks, time management,Speed in completing tasks,Quality in services,Accuracy in arithmetic operations"
+    />
+  </head>
+  <body">
+    <!-- start structure for header-->
+    <header class="pagecontainer">
+      <img src="images/logo.png" />
+      <p class="chFont">
+        To-Do list Web-Applicaition
+      </p>
+      <h1 class="chFont">TO<span id="todoTitle"> DO</span></h1>
+    </header>
+    <!-- content sidebar-->
+    <div class="chFont" id="sidebar">
+      <div>
+        <a href="#"
+          ><i
+            onclick="toggleSidebar(this)"
+            class="toggle-btn fa fa-bars fa-2x"
+          ></i
+        ></a>
+      </div>
+      <div class="list">
+        <div class="item"><a href="index.html" class="chFont">SignUp</a></div>
+        <div class="item">
+          <a href="To-Do list.html" class="chFont"> to do List</a>
+        </div>
+        <div class="item">
+          <a href="calculator.html" class="chFont">calculator</a>
+        </div>
+        <form id="fontEditor" name="form">
+          <select name="font_family" id="font_family" onchange="myFunction()">
+            <option value="Arial" selected class="chFont">Arial</option>
+            <option value="Verdana" class="chFont">Verdana</option>
+            <option value="Helvetica" class="chFont">Helvetica</option>
+            <option value="Times New Roman" class="chFont">
+              Times New Roman
+            </option>
+            <option value="Courier New" class="chFont">Courier New</option>
+          </select>
+          <select name="font_size" id="font_size" onchange="myFunction1()">
+            <option value="8pt" class="chFont">8pt</option>
+            <option value="10pt" class="chFont">10pt</option>
+            <option value="12pt" class="chFont">12pt</option>
+            <option value="14pt" class="chFont">14pt</option>
+            <option value="16pt" class="chFont">16pt</option>
+          </select>
+          <label
+            >Italic
+            <input
+              type="checkbox"
+              name="font_italic"
+              id="font_italic"
+              onclick="checkedFunc(this.id);"
+              class="chFont"
+          /></label>
+          <label
+            >Bold
+            <input
+              type="checkbox"
+              name="font_bold"
+              id="font_bold"
+              onclick="checkedFunc(this.id);"
+              class="chFont"
+          /></label>
+          <label
+            >Underline
+            <input
+              type="checkbox"
+              name="font_underline"
+              id="font_underline"
+              onclick="checkedFunc(this.id);"
+              class="chFont"
+          /></label>
+        </form>
+        <div class="darkBG">
+          <button type="button" onclick="darkBG()" class="chFont">
+            Set dark background
+          </button>
+        </div>
+        <div class="lightBG">
+          <button type="button" onclick="lightBG()" class="chFont">
+            Set light background
+          </button>
+        </div>
+      </div>
+    </div>
+    <!--start form structure-->
+    <div class="calculator-grid">
+        <div class="output">
+          <div data-previous-operand class="previous-operand"></div>
+          <div data-current-operand class="current-operand"></div>
+        </div>
+        <button data-all-clear>AC</button>
+        <button data-operation>X^</button>
+        <button data-operation>÷</button>
+        <button data-operation>|X|</button>
+  
+        <button data-number>1</button>
+        <button data-number>2</button>
+        <button data-number>3</button>
+        <button data-operation>X!</button>
+  
+        <button data-number>4</button>
+        <button data-number>5</button>
+        <button data-number>6</button>
+        <button data-operation>*</button>
+  
+        <button data-number>7</button>
+        <button data-number>8</button>
+        <button data-number>9</button>
+        <button data-operation>+</button>
+        <button data-operation>-</button>
+        <button data-number>.</button>
+        <button data-number>0</button>
+  
+        <button data-equals class="span-two">=</button>
+      </div>
+  
+      
+    <!--link jQuery +javascript-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="js/calculator.js"></script>
+
+    <footer class="footer chFont">
+      <p>copy-right&copy; 2020 all right reserved for :ARA @Amman-Jordan</p>
+    </footer>
+  </body>
+</html>

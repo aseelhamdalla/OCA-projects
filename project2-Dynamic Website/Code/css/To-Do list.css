@@ -1,0 +1,203 @@
+.pagecontainer {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Chilanka";
+  font-weight: bolder;
+  color: white;
+  font-size: 15px;
+}
+#sidebar > div {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Chilanka";
+  font-weight: bolder;
+  color: white;
+  font-size: 15px;
+}
+#sidebar a i {
+  color: white;
+}
+/* html,
+body {
+  width: 100%;
+  height: 100%;
+}
+#wholePage {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
+} */
+/*todo list*/
+#To-Do {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+body {
+  margin: 0;
+  background-image: url(../images/whiteBG.jpg);
+}
+
+#task {
+  height: 2.8em;
+}
+#addTaskButton {
+  height: 2.6em;
+  margin-top: 0.1em;
+}
+.bold {
+  font-weight: bold !important;
+}
+.darkBG button {
+  color: #fcfcfc;
+  background-color: #2b0b49;
+  border: 1px white solid;
+  margin: 5px 0 0 5px;
+  padding: 3px;
+  height: 30px;
+}
+.lightBG button {
+  color: #000000;
+  background-color: #f8f8f8;
+  border: 1px black solid;
+  margin: 5px 0 0 5px;
+  padding: 3px;
+  height: 30px;
+}
+.darkBG button:hover {
+  background-color: #4d00a5;
+  color: rgb(255, 255, 255);
+}
+.lightBG button:hover {
+  background-color: #6cbbf8;
+  color: rgb(255, 255, 255);
+}
+#fontEditor {
+  margin: 5px 0 0 5px;
+}
+#fontEditor option {
+  color: black;
+}
+#fontEditor {
+  color: black;
+}
+/* .ulContainer {
+    right: 40px;
+    left: 40px;
+    z-index: -1;
+    position: absolute;
+  } */
+
+/* style for header*/
+.pagecontainer {
+  background-color: #225378;
+  display: grid;
+  grid-template-columns: auto;
+  position: static;
+  height: 20%;
+  justify-content: center;
+}
+/* style for logo*/
+.pagecontainer img {
+  width: 10%;
+  position: absolute;
+  right: 87%;
+  z-index: 1;
+  padding: 9px;
+}
+/* style for para and heading and anchour link*/
+.pagecontainer p {
+  width: auto;
+  position: relative;
+  top: 20%;
+  font-weight: bolder;
+  font-size: 2vw;
+}
+.pagecontainer h1 {
+  text-align: center;
+  font-size: 2vw;
+  font-weight: bolder;
+}
+.list a {
+  text-decoration: none;
+  color: white;
+}
+/* desigin for menue sise bar*/
+#sidebar {
+  position: absolute;
+  top: 0px;
+  left: -200px;
+  width: 200px;
+  height: 100%;
+  background: #2d709f;
+  transition: all 300ms linear;
+  z-index: 1;
+  font-size: 30px;
+}
+#sidebar.active {
+  left: 0px;
+}
+#sidebar .toggle-btn {
+  position: absolute;
+  left: 220px;
+  top: 10px;
+}
+#sidebar .toggle-btn span {
+  display: block;
+  width: 30px;
+  height: 5px;
+  background: #151719;
+  margin: 5px 0px;
+  cursor: pointer;
+}
+#sidebar div.list div.item {
+  padding: 15px 10px;
+  border-bottom: 1px solid #444;
+  color: #fcfcfc;
+  text-transform: uppercase;
+}
+
+.footer {
+  z-index: -1;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  line-height: 70px;
+  background-color: #225378;
+  text-align: left;
+  font-size: 15px;
+  color: white;
+}
+
+@media screen and (max-width: 600px) {
+  .fields {
+    margin-top: 2.5em;
+    width: 90%;
+    padding-right: 50px;
+  }
+  p {
+    font-size: 18px;
+    text-align: center;
+  }
+  h1 {
+    text-align: center;
+    font-size: 17px;
+    font-weight: bolder;
+    overflow-wrap: break-word;
+  }
+  img {
+    width: 75px;
+    top: 15px;
+    left: 5px;
+  }
+  .pagecontainer p {
+    width: 75%;
+    left: 15%;
+    font-size: 14px;
+  }
+}

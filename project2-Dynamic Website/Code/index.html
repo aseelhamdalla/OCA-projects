@@ -1,0 +1,231 @@
+<html>
+  <head>
+    <title>ARA Sign-in page</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/index.css" />git
+    <link
+      href="https://fonts.googleapis.com/css?family=Chilanka"
+      rel="stylesheet"
+    />
+    <!-- icone for menu-->
+    <script
+      src="https://kit.fontawesome.com/7ae71a9832.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Iused 5type for meta-->
+    <meta charset="utf-8" />
+
+    <meta name="author" content="BY ARA" />
+    <!--the viewport to make your website look good on all devices-->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="ARA Bussiness Owner BY Assel Roaa and Adem.This web application was created to help businessmen, 
+the banking sector and companies to organize their businesses, accounts housewives, university and school students."
+    />
+    <meta
+      name="keyword"
+      content="Organize tasks, time management,Speed in completing tasks,Quality in services,Accuracy in arithmetic operations"
+    />
+  </head>
+  <body onload="fillform()">
+    <!-- start structure for header-->
+    <header class="pagecontainer">
+      <img src="images/logo.png" />
+      <p class="chFont">
+        "Life is like riding a bicycle. To keep your balance, you must keep
+        moving."
+      </p>
+      <h1 class="chFont">Sign Up</h1>
+    </header>
+    <!-- content sidebar-->
+    <div class="chFont" id="sidebar">
+      <div>
+        <a href="#"
+          ><i
+            onclick="toggleSidebar(this)"
+            class="toggle-btn fa fa-bars fa-2x"
+          ></i
+        ></a>
+      </div>
+      <div class="list">
+        <div class="item"><a href="index.html" class="chFont">SignUp</a></div>
+        <div class="item">
+          <a href="To-Do list.html" class="chFont">List to do</a>
+        </div>
+        <div class="item">
+          <a href="calculator.html" class="chFont">calculator</a>
+        </div>
+        <form id="fontEditor" name="form">
+          <select name="font_family" id="font_family" onchange="myFunction()">
+            <option value="Arial" selected class="chFont">Arial</option>
+            <option value="Verdana" class="chFont">Verdana</option>
+            <option value="Helvetica" class="chFont">Helvetica</option>
+            <option value="Times New Roman" class="chFont">
+              Times New Roman
+            </option>
+            <option value="Courier New" class="chFont">Courier New</option>
+          </select>
+          <select name="font_size" id="font_size" onchange="myFunction1()">
+            <option value="8pt" class="chFont">8pt</option>
+            <option value="10pt" class="chFont">10pt</option>
+            <option value="12pt" class="chFont">12pt</option>
+            <option value="14pt" class="chFont">14pt</option>
+            <option value="16pt" class="chFont">16pt</option>
+          </select>
+          <label
+            >Italic
+            <input
+              type="checkbox"
+              name="font_italic"
+              id="font_italic"
+              onclick="checkedFunc(this.id);"
+              class="chFont"
+          /></label>
+          <label
+            >Bold
+            <input
+              type="checkbox"
+              name="font_bold"
+              id="font_bold"
+              onclick="checkedFunc(this.id);"
+              class="chFont"
+          /></label>
+          <label
+            >Underline
+            <input
+              type="checkbox"
+              name="font_underline"
+              id="font_underline"
+              onclick="checkedFunc(this.id);"
+              class="chFont"
+          /></label>
+        </form>
+        <div class="darkBG">
+          <button type="button" onclick="darkBG()" class="chFont">
+            Set dark background
+          </button>
+        </div>
+        <div class="lightBG">
+          <button type="button" onclick="lightBG()" class="chFont">
+            Set light background
+          </button>
+        </div>
+      </div>
+    </div>
+    <!--start form structure-->
+    <div class="flex-container">
+      <div id="inp">
+        <form
+          class="fields"
+          onsubmit="return validation()"
+          style="margin-top: 2.5em"
+          class="chFont"
+        >
+          <div class="txt">
+            <input
+              class="form-control"
+              id="Username"
+              type="text"
+              placeholder="User Name"
+              class="chFont"
+            />
+          </div>
+
+          <div id="name_err" style="color: red" class="chFont"></div>
+          <div class="txt">
+            <input
+              placeholder="Email "
+              class="form-control chFont"
+              id="email"
+              type="text"
+            />
+          </div>
+
+          <div id="email_err" style="color: red" class="chFont"></div>
+
+          <div class="txt">
+            <input
+              class="form-control chFont"
+              id="DOB"
+              type="text"
+              placeholder="Date of birth"
+            />
+          </div>
+
+          <div id="DOB_err" style="color: red" class="chFont"></div>
+
+          <div class="txt chFont">
+            <input
+              class="form-control"
+              id="phone"
+              type="text"
+              placeholder="Phone Number"
+            />
+          </div>
+
+          <div id="phone_err" style="color: red" class="chFont"></div>
+
+          <div class="txt chFont">
+            <input
+              class="form-control chFont"
+              id="pass"
+              type="password"
+              placeholder="Password"
+            />
+          </div>
+          <div id="pass_err" style="color: red" class="chFont"></div>
+
+          <div class="txt">
+            <button class="btn btn-primary chFont" id="bt1" value="submit">
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+      <!-- 3 buttons for local and session storage and clear-->
+      <div id="btns">
+        <div class="acceptBox chFont">
+          <input type="checkbox" id="storagePermission" />
+          <h4>DO you accept to store your data??</h4>
+        </div>
+
+        <div class="flexcont">
+          <button
+            onclick="localsessionstore('local')"
+            class="storageButton btn btn-primary chFont"
+            disabled
+            class="chFont"
+          >
+            Save to local storage
+          </button>
+
+          <button
+            onclick="localsessionstore('session')"
+            class="storageButton btn btn-primary chFont"
+            disabled
+          >
+            Save to session storage
+          </button>
+          <button class="btn btn-danger chFont" onclick="clearall()">
+            Clear all
+          </button>
+        </div>
+      </div>
+    </div>
+    <!--link jQuery +javascript-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="js/index.js"></script>
+
+    <footer class="footer chFont">
+      <p>copy-right&copy; 2020 all right reserved for :ARA @Amman-Jordan</p>
+    </footer>
+  </body>
+</html>
